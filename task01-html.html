@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<p>Tính tuổi anh và bố từ tuổi em khi biết em kém anh 3 tuổi và tuổi bố gấp 6 lần tuổi anh.</p>
+<form name="Age Calculator">
+  <label for="tuoiEm">Nhập tuổi em:</label>
+  <input id="tuoiEm" type="text">
+  <button type="button" onclick="calculateAge()">Tính tuổi anh và bố</button><br>
+  <p id="result"></p>
+</form>
+<script>
+  function calculateAge() {
+    let tuoiEm = +document.getElementById("tuoiEm").value;
+    let tuoiAnh = tuoiEm + 3;
+    let tuoiBo = tuoiAnh * 6;
+    document.getElementById("result").innerHTML = `Tuổi anh là ${tuoiAnh} còn tuổi bố là ${tuoiBo}`;
+  }
+
+
+</script>
+</body>
+</html>
