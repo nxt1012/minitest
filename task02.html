@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+  let canhA = prompt("Nhập vào số đo cạnh thứ nhất");
+  let canhB = prompt("Nhập vào số đo cạnh thứ hai");
+  let canhC = prompt("Nhập vào số đo cạnh thứ ba");
+  let a = parseFloat(canhA);
+  let b = parseFloat(canhB);
+  let c = parseFloat(canhC);
+  if (a <= 0 || b <=0 || c <=0 || ( a + b <= c) || (b + c <= a) || (c + a <= b)) {
+    alert("Ba cạnh vừa nhập không thỏa mãn điều kiện là 3 cạnh của một tam giác!");
+  } else {
+    if ((a * a + b * b === c * c) || (b * b + c * c === a * a) || (c * c + a * a === b * b)) {
+      alert("Tam giác có 3 cạnh vừa nhập là tam giác vuông");
+    } else {
+      alert("Tam giác có 3 cạnh vừa nhập không phải là tam giác vuông");
+    }
+  }
+</script>
+</body>
+</html>
