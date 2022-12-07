@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+  <style>
+    table {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h3>Nhập số đo 3 cạnh để kiểm tra xem có phải tam giác vuông không</h3>
+<form name="Evaluate Triangle">
+  <table>
+    <tr>
+      <td><label for="canhA">Nhập cạnh thứ nhất</label></td>
+      <td><label for="canhB">Nhập cạnh thứ hai</label></td>
+      <td><label for="canhC">Nhập cạnh thứ ba</label></td>
+    </tr>
+    <tr>
+      <td><input id="canhA" type="text"></td>
+      <td><input id="canhB" type="text"></td>
+      <td><input id="canhC" type="text"></td>
+    </tr>
+  </table>
+
+
+
+
+
+
+  <button type="button" onclick="isRightTriangle()">Kiểm tra</button>
+  <p id="result"></p>
+</form>
+<script>
+  function isRightTriangle() {
+    let a = parseFloat(document.getElementById("canhA").value);
+    let b = parseFloat(document.getElementById("canhB").value);
+    let c = parseFloat(document.getElementById("canhC").value);
+    if (a <= 0 || b <=0 || c <=0 || ( a + b <= c) || (b + c <= a) || (c + a <= b)) {
+      document.getElementById("result").innerHTML = "Ba cạnh vừa nhập không thỏa mãn điều kiện là 3 cạnh của một tam giác!";
+    } else {
+      if ((a * a + b * b === c * c) || (b * b + c * c === a * a) || (c * c + a * a === b * b)) {
+        document.getElementById("result").innerHTML = "Tam giác có 3 cạnh vừa nhập là tam giác vuông";
+      } else {
+        document.getElementById("result").innerHTML = "Tam giác có 3 cạnh vừa nhập không phải là tam giác vuông";
+      }
+    }
+  }
+</script>
+</body>
+</html>
